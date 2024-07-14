@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y make nasm build-essential gcc grub-pc-bin xorriso grub-common
+        sudo apt-get install -y make nasm build-essential gcc grub-pc-bin xorriso grub-common mtools
 
     - name: Build x86_64
       run: make build-x86_64
