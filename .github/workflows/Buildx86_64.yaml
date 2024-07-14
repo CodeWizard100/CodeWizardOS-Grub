@@ -23,3 +23,9 @@ jobs:
 
     - name: Build x86_64
       run: make build-x86_64
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Image
+        path: dist/x86_64/kernel.iso
