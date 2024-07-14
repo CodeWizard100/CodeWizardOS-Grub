@@ -27,3 +27,8 @@ jobs:
     - name: Run x86_64
       run: timeout 10 qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso -nographic || true
 
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Image
+        path: dist/x86_64/kernel.iso
